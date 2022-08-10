@@ -17,7 +17,6 @@ public class HomePage extends BasePage {
 
 	public SearchResultsPage search(String searchString) {
 		findElement(By.name(SEARCH_FIELD_NAME)).sendKeys(searchString + Keys.ENTER);
-		testEnv.handleWaits().sleep(5);
 		return new SearchResultsPage(testEnv);
 	}
 }
